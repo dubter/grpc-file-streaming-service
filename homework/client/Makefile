@@ -3,7 +3,7 @@ COVERAGE_OUT := coverage/coverage.out
 all: lint test build clean
 
 build: clean_build
-	go build -o build/file_transfer_server cmd/main.go
+	go build -o build/file_transfer_client cmd/main.go
 
 clean: clean_build clean_cache clean_test_cache
 

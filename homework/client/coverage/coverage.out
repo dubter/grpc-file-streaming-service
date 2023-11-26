@@ -1,0 +1,14 @@
+mode: atomic
+file_transfer/client/internal/config/config.go:41.58,43.16 2 1
+file_transfer/client/internal/config/config.go:43.16,45.3 1 0
+file_transfer/client/internal/config/config.go:47.2,49.16 3 1
+file_transfer/client/internal/config/config.go:49.16,51.3 1 0
+file_transfer/client/internal/config/config.go:53.2,54.16 2 1
+file_transfer/client/internal/config/config.go:54.16,56.3 1 0
+file_transfer/client/internal/config/config.go:58.2,59.33 2 1
+file_transfer/client/internal/config/config.go:59.33,61.3 1 0
+file_transfer/client/internal/config/config.go:63.2,67.16 2 1
+file_transfer/client/internal/config/config.go:67.16,69.3 1 0
+file_transfer/client/internal/config/config.go:71.2,79.8 2 1
+file_transfer/client/internal/config/interceptor.go:19.9,27.2 4 0
+file_transfer/client/internal/config/interceptor.go:37.30,45.2 4 0

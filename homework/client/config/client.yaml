@@ -1,0 +1,13 @@
+timeout: 5s
+port: 50051
+
+get_file_list:
+  exec: true
+
+get_file:
+  exec: true
+  name: test.txt
+
+get_file_info:
+  exec: true
+  name: test.txt

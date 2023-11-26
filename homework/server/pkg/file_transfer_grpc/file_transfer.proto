@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package file_transfer_grpc;
+
+option go_package = "./;file_transfer_grpc";
+
+import "google/api/annotations.proto";
+
+service FileTransferService {
+  rpc GetFile(GetFileRequest) returns (stream FileChunk) {
+    option (google.api.http) = {
+      get: "/files/{name}/content"
+    };
+  }
+  rpc GetFileList(GetFileListRequest) returns (GetFileListResponse) {
+    option (google.api.http) = {
+      get: "/files"
+    };
+  }
+  rpc GetFileInfo(GetFileInfoRequest) returns (GetFileInfoResponse) {
+    option (google.api.http) = {
+      get: "/files/{name}/info"
+    };
+  }
+}
+
+message GetFileRequest {
+  string name = 1;
+}
+
+message FileChunk {
+  bytes chunk_data = 1;
+}
+
+message GetFileListRequest {}
+
+message GetFileListResponse {
+  repeated string names = 1;
+}
+
+message GetFileInfoRequest {
+  string name = 1;
+}
+
+message GetFileInfoResponse {
+  string name = 1;
+  string size = 2;
+  string type = 3;
+  string creation_date = 4;
+  string last_modified_date = 5;
+  string access_rights = 6;
+  string location = 7;
+}
